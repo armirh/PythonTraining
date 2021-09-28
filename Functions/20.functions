@@ -1,0 +1,10 @@
+#function = a block of code which is executed only when it is called
+
+#to start a function we use def in front
+def hello(name,lastname,age): #add parameter inside, as much as we need
+    print("Hello " + name + lastname)
+    print("I am " + str(age) + " years old")
+
+#every parameter has to be matched, so string with string and int with int in this example
+hello("Armir"," Halimi",24) #calling the function and adding value to the parameter, we send arguments
+#passing values means passing arguments
