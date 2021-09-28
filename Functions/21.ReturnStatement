@@ -1,0 +1,16 @@
+#return statement = functions send python values/objects back to the caller
+#                   these values/objects are known as the function's return value
+
+def multiply(number1,number2):
+    result = number1 * number2
+    return result
+print(multiply(6,8))
+
+#another way of using it with less lines of code
+def multiply2(n1,n2):
+    return n1*n2
+
+x = multiply2(7,6)
+print(x)
+
+
