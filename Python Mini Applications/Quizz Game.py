@@ -2,7 +2,7 @@
 def new_game():
 
     #list of guesses
-    guesses = []
+    guesses = [] # a list to store our guesses
 
     correct_guesses = 0
     question_num = 0
