@@ -9,12 +9,14 @@
 # then python will execute the code found within __main__
 # the initial module being run
 
-import mod2
+
+def myfunction():
+    print("This is a function")
+
 
 if __name__ == '__main__':
-    print("Running this module directly!")
+    print("Executed directly")
 else:
-    print("Running other modules")
+    print("Executed when imported")
 
-print(__name__)
-print(mod2.__name__)
+myfunction()
