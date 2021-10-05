@@ -1,0 +1,16 @@
+# GUI, using tkinter
+# widgets = GUI elements: buttons, textboxes, labels, images
+# windows = serves as a container to hold or contain these widgets
+
+from tkinter import *
+
+window = Tk()  # instantiate an instance of a window for us
+window.geometry("400x400")  # geometry to change window size
+window.title("GUI window")  # to change the title
+
+icon = PhotoImage(file="download.png")  # we need to convert it first before using it
+window.iconphoto(True, icon)
+window.config(background="black")  # change the bk color of the window, use names or hex color
+
+window.mainloop()  # to run window on computer screen, listen to events
+
