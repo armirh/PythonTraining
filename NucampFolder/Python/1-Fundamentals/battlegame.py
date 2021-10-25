@@ -45,30 +45,30 @@ def BattleGame():
     for i, value in enumerate(characters, 1):
         print("{}.) {}".format(i, value))
 
-    character = input("Choose your character character:")
+    character = input("Choose your character character: ").lower()
 
     while True:
-        if character == "1" or character.lower == "wizard":
+        if character == "1" or character == "wizard":
             character = wizard
             my_hp = wizard_hp
             my_damage = wizard_damage
             break
-        elif character == "2" or character.lower == "elf":
+        elif character == "2" or character == "elf":
             character = elf
             my_hp = elf_hp
             my_damage = elf_damage
             break
-        elif character == "3" or character.lower == "human":
+        elif character == "3" or character == "human":
             character = human
             my_hp = human_hp
             my_damage = human_damage
             break
-        elif character == "4" or character.lower == "orc":
+        elif character == "4" or character == "orc":
             character = orc
             my_hp = orc_hp
             my_damage = orc_damage
             break
-        elif character == "5" or character.lower == "end game":
+        elif character == "5" or character == "end game":
             quit()
         print("Unknown Character")
 
