@@ -3,7 +3,7 @@ from donations_pkg.user import login,register,donate,show_donations
 
 #Task 2: Show homepage and initialize app data
 
-database = {"admin": "admin", "password": "password123"}
+database = {"admin": "password"}
 donations = []
 authorized_users = ""
 

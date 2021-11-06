@@ -1,9 +1,8 @@
 #Task 4: Login functionality
 # In its parameter list, define three parameters: database, username, and password.
 
-
 def login(database, username, password):
-    if username in dict.keys(database) and password in dict.values(database):
+    if username in dict.keys(database) and database[username] == password:
         print("Welcome back: ", username)
     elif username in dict.keys(database) or password in dict.values(database):
         print("Check your credentials again!")
@@ -19,14 +18,14 @@ def register(database, username):
 def donate(username):
     donation_amount = float(input("Enter an amount to donate: "))
     donation = print(username, " Has donated: ", donation_amount)
-    print("Thank you for the donation!")
+    return donation
 
 def show_donations(donations):
     print("\n--- All Donations ---")
-    if donations == 0:
+    if len(donations) == 0:
         print("Currently there are no donations yet!")
     else:
-        print("List of donations: ", donations)
+        for i in donations:
+            print(i)
 
-    print(sum(donations))
-    
+
