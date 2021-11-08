@@ -29,11 +29,14 @@ while True:
             print("The username is too long")
         if len(password) < 5:
             print("The password must contain at least 5 chars")
-        if username and password != "":
-            authorized_users = register(database,username)
-        print()
+        authorized_users = register(database, username)
+        if authorized_users != "":
+            database[username] = password
     elif choice == "3":
-        donation = donate(authorized_users)
+        if authorized_users == "":
+            print("You are not logged in!")
+        else:  
+            donation = donate(authorized_users)
         donations.append(donation)
     elif choice == "4":
         show_donations(donations)

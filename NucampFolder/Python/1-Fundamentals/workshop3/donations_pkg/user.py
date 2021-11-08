@@ -17,15 +17,15 @@ def register(database, username):
 
 def donate(username):
     donation_amount = float(input("Enter an amount to donate: "))
-    donation = print(username, " Has donated: ", donation_amount)
+    donation = f'{username} donated ${donation_amount}'
     return donation
 
 def show_donations(donations):
     print("\n--- All Donations ---")
-    if len(donations) == 0:
-        print("Currently there are no donations yet!")
+    if not donations:
+        print("There are currently no donations")
     else:
-        for i in donations:
-            print(i)
+        for d in donations:
+            print(d)
 
 
